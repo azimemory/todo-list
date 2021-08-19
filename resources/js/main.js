@@ -61,7 +61,7 @@ let registSchedule = (e) => {
 	}
 	
 	localStorage.setItem('todo',JSON.stringify(todoList));
-	renderSchedule(todoList.slice(0,8));
+	renderSchedule(todoList.slice(0,5));
 }
 
 let renderSchedule = (todoList) => {
@@ -92,7 +92,7 @@ let removeSchedule = event => {
 
 let renderPage = (renderPage, cnt) => {
 
-	if(!cnt) cnt = 8;
+	if(!cnt) cnt = 5;
 	
 	//현재 페이지
 	let todoList = localStorage.getItem('todo');
@@ -122,7 +122,7 @@ let renderPage = (renderPage, cnt) => {
 	}
 	
 	if(todoList){
-		renderSchedule(JSON.parse(todoList).slice(0,8));
+		renderSchedule(JSON.parse(todoList).slice(0,5));
 	}
 	setInterval(renderCurrentTime,1000);
 })()
