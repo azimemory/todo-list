@@ -100,7 +100,7 @@ let renderPage = (renderPage, cnt) => {
 	
 	todoList = JSON.parse(todoList);
 	
-	let lastPage = Math.ceil(todoList.length/8);
+	let lastPage = Math.ceil(todoList.length/5);
 	if(renderPage > lastPage) renderPage = lastPage;
 	if(renderPage < 1)	renderPage = 1;
 		
